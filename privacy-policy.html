@@ -13,16 +13,11 @@
         padding: 0;
         color: #2D3436;
         line-height: 1.8;
-        transition: all 0.3s ease; /* إضافة تنعيم عند الانتقال */
+        transition: all 0.3s ease;
     }
 
-    /* ضبط اتجاه العناصر بناءً على اتجاز الصفحة */
-    [dir="rtl"] {
-        text-align: right;
-    }
-    [dir="ltr"] {
-        text-align: left;
-    }
+    [dir="rtl"] { text-align: right; }
+    [dir="ltr"] { text-align: left; }
 
     .header {
         background-color: #0F141E;
@@ -52,7 +47,6 @@
         z-index: 100;
     }
 
-    /* تغيير مكان الزر بناءً على الاتجاه */
     [dir="ltr"] .translate-btn { right: 20px; }
     [dir="rtl"] .translate-btn { left: 20px; }
 
@@ -83,14 +77,8 @@
         padding: 0 15px;
     }
 
-    /* ضبط الخط الذهبي بجانب العنوان بناءً على الاتجاه */
     [dir="ltr"] h2 { border-left: 5px solid #D4AF37; }
     [dir="rtl"] h2 { border-right: 5px solid #D4AF37; }
-
-    h3 {
-        font-size: 20px;
-        margin-top: 25px;
-    }
 
     p {
         font-size: 16px;
@@ -119,11 +107,6 @@
         transition: 0.3s ease;
     }
 
-    .contact a:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
-
     .footer {
         text-align: center;
         font-size: 14px;
@@ -146,8 +129,7 @@
 </div>
 
 <div class="container">
-    <div class="card" id="content">
-        </div>
+    <div class="card" id="content"></div>
 </div>
 
 <div class="footer" id="footerText">
@@ -164,16 +146,25 @@ const translations = {
         body: `
             <h2>Introduction</h2>
             <p>We respect your privacy and are committed to protecting any information during your use of the "Quran Radio" app. This policy clarifies that the app does not collect any personal or usage data from users.</p>
+
             <h2>Information Collected</h2>
             <p>Our app <strong>does not collect any data</strong> from users. All operations are processed locally on your device, and no information is stored or shared.</p>
+
+            <h2>Third-Party Services</h2>
+            <p>The app does not use any third-party analytics or advertising services.</p>
+
             <h2>Qibla Direction Feature</h2>
             <p>When using the Qibla direction feature, the app uses your device's location sensor to calculate the direction. This process is done entirely on your device and your location is not stored or shared.</p>
+
             <h2>Radio Stream Links</h2>
             <p>The app only connects you to official Quran radio stream links.</p>
+
             <h2>Data Security</h2>
             <p>Since the app does not collect any data, everything is processed locally on your device, minimizing any privacy or security risks.</p>
+
             <h2>Your Rights</h2>
             <p>As no user data is collected, you have full control over how you use the app and its settings on your device.</p>
+
             <h2>Contact Us</h2>
             <p>If you have any questions about the privacy policy, you can contact us via email:</p>
             <div class="contact"><a href="mailto:radio1668@gmail.com">radio1668@gmail.com</a></div>
@@ -185,16 +176,25 @@ const translations = {
         body: `
             <h2>مقدمة</h2>
             <p>نحن نحترم خصوصيتك وملتزمون بحماية بياناتك أثناء استخدامك لتطبيق "إذاعة القرآن الكريم". توضح هذه السياسة أن التطبيق لا يجمع أي بيانات شخصية أو استخدامية من المستخدمين.</p>
+
             <h2>المعلومات التي يجمعها التطبيق</h2>
             <p>تطبيقنا <strong>لا يجمع أي بيانات</strong> عن المستخدمين. جميع العمليات تتم محلياً على جهازك فقط، ولا يوجد أي تخزين أو مشاركة لأي معلومات.</p>
+
+            <h2>الخدمات الخارجية</h2>
+            <p>لا يستخدم التطبيق أي خدمات تحليلات أو إعلانات من جهات خارجية.</p>
+
             <h2>ميزة تحديد القبلة</h2>
             <p>عند استخدام ميزة تحديد القبلة، يستخدم التطبيق مستشعر الموقع على هاتفك لحساب الاتجاه. هذه العملية تتم بالكامل على جهازك، ولا يتم تخزين أو مشاركة موقعك مع أي جهة خارجية.</p>
+
             <h2>روابط البث الإذاعي</h2>
             <p>التطبيق يربطك فقط بروابط البث الرسمية لإذاعات القرآن الكريم.</p>
+
             <h2>أمان البيانات</h2>
             <p>نظرًا لأن التطبيق لا يجمع بيانات، فإن كل ما يتم معالجته يبقى محليًا على جهازك، مما يقلل أي مخاطر متعلقة بالأمان أو الخصوصية.</p>
+
             <h2>حقوقك</h2>
             <p>بما أنه لا توجد بيانات مستخدم يتم جمعها، فإنك تتحكم بالكامل في استخدام التطبيق وإعداداته على جهازك الشخصي.</p>
+
             <h2>تواصل معنا</h2>
             <p>إذا كان لديك أي سؤال بخصوص سياسة الخصوصية، يمكنك التواصل معنا عبر البريد الإلكتروني:</p>
             <div class="contact"><a href="mailto:radio1668@gmail.com">radio1668@gmail.com</a></div>
@@ -209,14 +209,12 @@ function toggleLanguage() {
     const footerText = document.getElementById('footerText');
 
     if (isEnglish) {
-        // تحويل للعربي
         htmlTag.setAttribute('dir', 'rtl');
         htmlTag.setAttribute('lang', 'ar');
         content.innerHTML = translations.ar.body;
         mainTitle.innerText = translations.ar.title;
         footerText.innerHTML = translations.ar.footer;
     } else {
-        // تحويل للإنجليزي
         htmlTag.setAttribute('dir', 'ltr');
         htmlTag.setAttribute('lang', 'en');
         content.innerHTML = translations.en.body;
@@ -226,7 +224,6 @@ function toggleLanguage() {
     isEnglish = !isEnglish;
 }
 
-// تحميل المحتوى الإنجليزي عند فتح الصفحة لأول مرة
 window.onload = () => {
     document.getElementById('content').innerHTML = translations.en.body;
 };
