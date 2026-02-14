@@ -33,9 +33,11 @@
         font-size: 32px;
     }
 
+    /* زر ثابت يمين دائماً */
     .translate-btn {
         position: absolute;
         top: 20px;
+        right: 20px;
         background: #D4AF37;
         color: #0F141E;
         border: none;
@@ -46,9 +48,6 @@
         transition: 0.3s;
         z-index: 100;
     }
-
-    [dir="ltr"] .translate-btn { right: 20px; }
-    [dir="rtl"] .translate-btn { left: 20px; }
 
     .translate-btn:hover {
         transform: translateY(-2px);
@@ -88,16 +87,15 @@
 
     .contact {
         text-align: center;
-        margin-top: 50px;
+        margin-top: 20px;
         background-color: #F8F5EB;
-        padding: 30px;
+        padding: 20px;
         border-radius: 15px;
         border: 1px solid #E9DCC0;
     }
 
     .contact a {
         display: inline-block;
-        margin-top: 15px;
         background: #0F141E;
         color: #D4AF37;
         text-decoration: none;
@@ -145,28 +143,28 @@ const translations = {
         footer: "&copy; 2026 All rights reserved by the app developer.",
         body: `
             <h2>Introduction</h2>
-            <p>We respect your privacy and are committed to protecting any information during your use of the "Quran Al-Kareem Radio" app. This policy clarifies that the app does not collect any personal or usage data from users.</p>
+            <p>We respect your privacy and are committed to protecting your personal information. This Privacy Policy explains how the Quran Al-Kareem Radio app handles user information.</p>
 
-            <h2>Information Collected</h2>
-            <p>Our app <strong>does not collect any data</strong> from users. All operations are processed locally on your device, and no information is stored or shared.</p>
+            <h2>Information Collection</h2>
+            <p>The application does <strong>not collect, store, or share any personal data</strong> from users. All app functions operate locally on your device.</p>
+
+            <h2>Permissions Usage</h2>
+            <p>The app may request access to device location and compass sensors to provide the Qibla direction feature. Location data is processed locally on your device and is not stored, tracked, or shared with any third parties.</p>
 
             <h2>Third-Party Services</h2>
-            <p>The app does not use any third-party analytics or advertising services.</p>
+            <p>The app does not use analytics tools, advertising networks, or third-party tracking services.</p>
 
-            <h2>Qibla Direction Feature</h2>
-            <p>When using the Qibla direction feature, the app uses your device's location sensor to calculate the direction. This process is done entirely on your device and your location is not stored or shared.</p>
+            <h2>Radio Streaming</h2>
+            <p>The application connects users to official Quran radio streaming links. No personal data is transmitted or stored during this process.</p>
 
-            <h2>Radio Stream Links</h2>
-            <p>The app only connects you to official Quran Al-Kareem radio stream links.</p>
+            <h2>Children's Privacy</h2>
+            <p>This application does not knowingly collect personal information from children under the age of 13.</p>
 
-            <h2>Data Security</h2>
-            <p>Since the app does not collect any data, everything is processed locally on your device, minimizing any privacy or security risks.</p>
-
-            <h2>Your Rights</h2>
-            <p>As no user data is collected, you have full control over how you use the app and its settings on your device.</p>
+            <h2>Changes to This Privacy Policy</h2>
+            <p>We may update this Privacy Policy in the future. Any changes will be posted on this page.</p>
 
             <h2>Contact Us</h2>
-            <p>If you have any questions about the privacy policy, you can contact us via email:</p>
+            <p>If you have any questions regarding this Privacy Policy, please contact us:</p>
             <div class="contact"><a href="mailto:radio1668@gmail.com">radio1668@gmail.com</a></div>
         `
     },
@@ -175,28 +173,28 @@ const translations = {
         footer: "&copy; 2026 جميع الحقوق محفوظة لمطور التطبيق.",
         body: `
             <h2>مقدمة</h2>
-            <p>نحن نحترم خصوصيتك وملتزمون بحماية بياناتك أثناء استخدامك لتطبيق "إذاعة القرآن الكريم". توضح هذه السياسة أن التطبيق لا يجمع أي بيانات شخصية أو استخدامية من المستخدمين.</p>
+            <p>نحن نحترم خصوصيتك ونلتزم بحماية بياناتك الشخصية. توضح هذه السياسة كيفية تعامل تطبيق إذاعة القرآن الكريم مع المعلومات.</p>
 
-            <h2>المعلومات التي يجمعها التطبيق</h2>
-            <p>تطبيقنا <strong>لا يجمع أي بيانات</strong> عن المستخدمين. جميع العمليات تتم محلياً على جهازك فقط، ولا يوجد أي تخزين أو مشاركة لأي معلومات.</p>
+            <h2>جمع المعلومات</h2>
+            <p>التطبيق <strong>لا يجمع أو يخزن أو يشارك أي بيانات شخصية</strong> عن المستخدمين. جميع وظائف التطبيق تعمل محليًا على جهازك فقط.</p>
+
+            <h2>استخدام الأذونات</h2>
+            <p>قد يطلب التطبيق إذن الوصول إلى الموقع ومستشعرات البوصلة لتوفير ميزة تحديد اتجاه القبلة. يتم استخدام الموقع محليًا على جهازك فقط ولا يتم تخزينه أو تتبعه أو مشاركته مع أي جهة خارجية.</p>
 
             <h2>الخدمات الخارجية</h2>
-            <p>لا يستخدم التطبيق أي خدمات تحليلات أو إعلانات من جهات خارجية.</p>
+            <p>لا يستخدم التطبيق أي أدوات تحليلات أو شبكات إعلانية أو خدمات تتبع خارجية.</p>
 
-            <h2>ميزة تحديد القبلة</h2>
-            <p>عند استخدام ميزة تحديد القبلة، يستخدم التطبيق مستشعر الموقع على هاتفك لحساب الاتجاه. هذه العملية تتم بالكامل على جهازك، ولا يتم تخزين أو مشاركة موقعك مع أي جهة خارجية.</p>
+            <h2>البث الإذاعي</h2>
+            <p>يقوم التطبيق بربط المستخدمين بروابط البث الرسمية لإذاعات القرآن الكريم، ولا يتم نقل أو تخزين أي بيانات شخصية أثناء عملية البث.</p>
 
-            <h2>روابط البث الإذاعي</h2>
-            <p>التطبيق يربطك فقط بروابط البث الرسمية لإذاعات القرآن الكريم.</p>
+            <h2>خصوصية الأطفال</h2>
+            <p>لا يقوم التطبيق بجمع أي معلومات شخصية من الأطفال دون سن 13 عامًا عن قصد.</p>
 
-            <h2>أمان البيانات</h2>
-            <p>نظرًا لأن التطبيق لا يجمع بيانات، فإن كل ما يتم معالجته يبقى محليًا على جهازك، مما يقلل أي مخاطر متعلقة بالأمان أو الخصوصية.</p>
-
-            <h2>حقوقك</h2>
-            <p>بما أنه لا توجد بيانات مستخدم يتم جمعها، فإنك تتحكم بالكامل في استخدام التطبيق وإعداداته على جهازك الشخصي.</p>
+            <h2>التعديلات على سياسة الخصوصية</h2>
+            <p>قد نقوم بتحديث سياسة الخصوصية مستقبلًا، وسيتم نشر أي تغييرات على هذه الصفحة.</p>
 
             <h2>تواصل معنا</h2>
-            <p>إذا كان لديك أي سؤال بخصوص سياسة الخصوصية، يمكنك التواصل معنا عبر البريد الإلكتروني:</p>
+            <p>إذا كان لديك أي استفسار بخصوص سياسة الخصوصية، يمكنك التواصل معنا عبر:</p>
             <div class="contact"><a href="mailto:radio1668@gmail.com">radio1668@gmail.com</a></div>
         `
     }
